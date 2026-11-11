@@ -1,0 +1,1 @@
+Add your profile photo here as profile.jpg. Replace the initials placeholder in templates/home.html when ready.\n
