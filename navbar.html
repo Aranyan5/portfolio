@@ -1,0 +1,5 @@
+<header class="header"><nav class="nav container" aria-label="Main navigation">
+<a class="brand" href="{{ url_for('home') }}"><b>A<span>.</span></b><strong>ARANYAN T</strong></a>
+<button class="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="navlinks"><i></i><i></i></button>
+<div class="navlinks" id="navlinks">{% for endpoint,label in [('home','Home'),('about','About'),('projects','Projects'),('skills','Skills'),('experience','Experience'),('contact',"Let's talk")] %}<a class="{{ 'active' if request.endpoint==endpoint else '' }}" href="{{ url_for(endpoint) }}">{{ label }}</a>{% endfor %}<button class="theme" aria-label="Switch color theme">☼</button></div>
+</nav></header>

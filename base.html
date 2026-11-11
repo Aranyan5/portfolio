@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aranyan T — Computer Science student focused on data analytics, AI, machine learning and software engineering.">
+<meta property="og:title" content="{{ page_title }} · Aranyan T"><meta property="og:description" content="Building intelligent solutions through data and technology.">
+<title>{{ page_title }} · Aranyan T</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+<script>try{let t=localStorage.getItem('aranyan-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
+<body><a class="skip" href="#main">Skip to content</a>{% include "partials/navbar.html" %}<main id="main">
+{% with messages=get_flashed_messages(with_categories=true) %}{% if messages %}<div class="container flashes" aria-live="polite">{% for c,m in messages %}<p class="flash {{ c }}">{{ m }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}</main>{% include "partials/footer.html" %}<script src="{{ url_for('static',filename='js/main.js') }}" defer></script></body></html>
